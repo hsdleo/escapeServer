@@ -13,7 +13,7 @@
 
        function formatNumber(n) {return (n<10? '0' : '') + n;}
        client = mows.createClient('ws://192.168.0.100:9001/mqtt')
-       client && client.subscribe('topicoArduinoPronto');
+       client && client.subscribe('topicoArduinoProntoA');
 
        client.on('message', function (topic, message) {
          console.log(message);
@@ -101,7 +101,7 @@
 
       $scope.minuto = formatNumber(Math.floor(timer1 / 60));
       $scope.segundo = formatNumber(timer1%60);
-      $scope.message = 'Home Controller';
+      $scope.message = 'Alcatraz Controller';
       $scope.imprimir = function(arg){
       }
   
@@ -175,7 +175,7 @@
 
     
            $scope.prepararJogo = function() {
-            client && client.publish('topicoPrincipal', String('01'));
+            client && client.publish('topicoPrincipalA', String('01'));
             $scope.comandoLuzCela(1);
 
           };
@@ -184,7 +184,7 @@
             $scope.tocarAmbiente();
             $scope.comandoLuzCela(0);
 
-            client && client.publish('topicoPrincipal', String('01'));
+            client && client.publish('topicoPrincipalA', String('01'));
           };
 
 
@@ -192,31 +192,31 @@
             $scope.resetTimer();
             $scope.comandoLuzCela(0);
             $scope.audioAmbiente.stop();
-            client && client.publish('topicoPrincipal', String('00'));
+            client && client.publish('topicoPrincipalA', String('00'));
           };
 
           $scope.comandoPassagem = function(cod) {
             var msg = '1' + cod; 
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalA', String(msg));
             $scope.message = cod;
 
           };
 
           $scope.comandoSaida = function(cod) {
             var msg = '2' + cod;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalA', String(msg));
             $scope.message = cod;
           };
 
           $scope.comandoGiroflex= function(cod) {
             var msg = '4' + cod;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalA', String(msg));
             $scope.message = cod;
           };
 
           $scope.comandoLuzCela = function(cod) {
             var msg = '3' + cod;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalA', String(msg));
             $scope.message = cod;
           };
 
