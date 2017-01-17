@@ -35,7 +35,7 @@
               $scope.tocarNada();
             }else{
               if(message=="3"){
-                $scope.audioTrovao.setVolume(0.8);
+                $scope.audioTrovao.setVolume(0.9);
                 $scope.audioTrovao.play();
                 $scope.efeitoTrovao();
                 $scope.tocarMedo();
@@ -80,36 +80,75 @@
         $scope.aberturaPassagem.playPause();
       };
       $scope.tocarDerrota = function () {
-        $scope.audioDerrota.setVolume(0.6);
-        $scope.audioDerrota.play();
+        $scope.audioDerrotaPiratas.setVolume(0.6);
+        $scope.audioDerrotaPiratas.play();
       };
-      $scope.tocarTimao = function () {
-        $scope.audioAmbiente.playPause();
-        $scope.audioTimao.setVolume(0.6);
-        $scope.audioTimao.play();
+
+      $scope.tocarEnigma = function () {
+        $scope.audioEnigma.setVolume(0.4);  
+        $scope.audioEnigma.play();
       };
+      $scope.tocarRepetirEnigma = function () {
+        $scope.audioRepetirEnigma.setVolume(0.4);  
+        $scope.audioRepetirEnigma.play();
+      };
+
+
       $scope.tocarExplosao = function () {
         $scope.audioExplosao.setVolume(0.4);  
         $scope.audioExplosao.play();
-
       };
 
+      $scope.dicaMacaco = function(){
+        $scope.dicaMacaco.setVolume(0.8);
+        $scope.dicaMacaco.play();
+      }
 
-      $scope.tocarTrovao = function () {
+      $scope.dicaMapa = function(){
+        $scope.dicaMapa.setVolume(0.8);
+        $scope.dicaMapa.play();
+      }
+
+      $scope.dicaXadrez = function(){
+        $scope.dicaXadrez.setVolume(0.8);
+        $scope.dicaXadrez.play();
+      }
+
+      $scope.dicaRemo = function(){
+        $scope.dicaRemo.setVolume(0.8);
+        $scope.dicaRemo.play();
+      }
+
+      $scope.dicaTimao = function(){
+        $scope.dicaTimao.setVolume(0.8);
+        $scope.dicaTimao.play();
+      }
+
+      $scope.dicaMacaco = function(){
+        $scope.dicaMacaco.setVolume(0.8);
+        $scope.dicaMacaco.play();
+      }
+
+
+      $scope.tocarTrovao1 = function () {
         $scope.audioTrovao.setVolume(0.8);
         $scope.audioTrovao.play();
         var msg = '70' ;
         client && client.publish('topicoPrincipalP', String(msg));
       };
+
+      $scope.tocarTrovao2 = function () {
+        $scope.audioTrovao.setVolume(0.8);
+        $scope.audioTrovao.play();
+        var msg = '90' ;
+        client && client.publish('topicoPrincipalP', String(msg));
+      };
+
       $scope.tocarMacaco = function () {
         $scope.audioMacaco.setVolume(0.4);
         $scope.audioMacaco.play();
       };
 
-      $scope.tocarSino = function () {
-        $scope.audioSino.setVolume(0.4);
-        $scope.audioSino.playPause();
-      };
       $scope.tocarObjetos = function () {
         $scope.audioObjetos.setVolume(1);
         $scope.audioObjetos.play();
@@ -182,14 +221,11 @@
            //$scope.sound = ngAudio.load("sounds/sirene.mp3"); // returns NgAudioObject
 
 
-           $scope.dicas = [{"id":"1","texto":"Cama (1)"},
-           {"id":"2","texto":"Cama (2)"},
-           {"id":"3","texto":"Ficha (1)"},
-           {"id":"4","texto":"Ficha (2)"},
-           {"id":"5","texto":"Alvo"},
-           {"id":"6","texto":"Cobertor"},
-           {"id":"7","texto":"Apelido"},
-           {"id":"8","texto":"Tangram"}];
+           $scope.dicas = [{"id":"1","texto":"Macaco"},
+           {"id":"2","texto":"Mapa"},
+           {"id":"3","texto":"Xadrez"},
+           {"id":"4","texto":"Remo"},
+           {"id":"5","texto":"Timao"}];
 
 
            $scope.alertas = [{"id":"1","texto":"Não tire as GARRAFAS"},
@@ -205,11 +241,11 @@
            {"id":"8","texto":"Fechar Saída"}];
 
            $scope.efeitos = [{"id":"1","texto":"Macaco"},
-           {"id":"2","texto":"Trovao"},
-           {"id":"3","texto":"Sino"},
-           {"id":"2","texto":"Ambiente"},
-           {"id":"2","texto":"Explosao Saida"},
-           {"id":"2","texto":"Derrota"}];
+           {"id":"2","texto":"Trovao(final com luz)"},
+           {"id":"3","texto":"Trovao(final sem luz)"},
+           {"id":"4","texto":"Repetir Enigma"},
+           {"id":"5","texto":"Explosao Saida"},
+           {"id":"6","texto":"Derrota"}];
 
 
            $scope.prepararJogo = function() {
