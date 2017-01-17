@@ -76,7 +76,7 @@
         $scope.somMedo.playPause();
       };
       $scope.tocarPassagem= function () {
-        $scope.aberturaPassagem.setVolume(0.4);
+        $scope.aberturaPassagem.setVolume(0.6);
         $scope.aberturaPassagem.playPause();
       };
       $scope.tocarDerrota = function () {
@@ -85,11 +85,11 @@
       };
 
       $scope.tocarEnigma = function () {
-        $scope.audioEnigma.setVolume(0.4);  
+        $scope.audioEnigma.setVolume(0.8);  
         $scope.audioEnigma.play();
       };
       $scope.tocarRepetirEnigma = function () {
-        $scope.audioRepetirEnigma.setVolume(0.4);  
+        $scope.audioRepetirEnigma.setVolume(0.8);  
         $scope.audioRepetirEnigma.play();
       };
 
@@ -99,49 +99,45 @@
         $scope.audioExplosao.play();
       };
 
-      $scope.dicaMacaco = function(){
+      $scope.tocarDicaMacaco = function(){
         $scope.dicaMacaco.setVolume(0.8);
         $scope.dicaMacaco.play();
       }
 
-      $scope.dicaMapa = function(){
+      $scope.tocarDicaMapa = function(){
         $scope.dicaMapa.setVolume(0.8);
         $scope.dicaMapa.play();
       }
 
-      $scope.dicaXadrez = function(){
+      $scope.tocarDicaXadrez = function(){
         $scope.dicaXadrez.setVolume(0.8);
         $scope.dicaXadrez.play();
       }
 
-      $scope.dicaRemo = function(){
+      $scope.tocarDicaRemo = function(){
         $scope.dicaRemo.setVolume(0.8);
         $scope.dicaRemo.play();
       }
 
-      $scope.dicaTimao = function(){
+      $scope.tocarDicaTimao = function(){
         $scope.dicaTimao.setVolume(0.8);
         $scope.dicaTimao.play();
-      }
-
-      $scope.dicaMacaco = function(){
-        $scope.dicaMacaco.setVolume(0.8);
-        $scope.dicaMacaco.play();
       }
 
 
       $scope.tocarTrovao1 = function () {
         $scope.audioTrovao.setVolume(0.8);
         $scope.audioTrovao.play();
-        var msg = '70' ;
-        client && client.publish('topicoPrincipalP', String(msg));
+        $scope.delayTrovao(1500);
+        //var msg = '70' ;
+        //client && client.publish('topicoPrincipalP', String(msg));
       };
 
       $scope.tocarTrovao2 = function () {
         $scope.audioTrovao.setVolume(0.8);
         $scope.audioTrovao.play();
-        var msg = '90' ;
-        client && client.publish('topicoPrincipalP', String(msg));
+        $scope.delayTrovao2(1500);
+        
       };
 
       $scope.tocarMacaco = function () {
@@ -153,6 +149,47 @@
         $scope.audioObjetos.setVolume(1);
         $scope.audioObjetos.play();
       };
+
+
+      var timerDelay;
+      $scope.delay = function(arg){
+
+        timerDelay = $interval(function(){
+          console.log("tempo passou");
+          $scope.pararDelay();
+        } 
+        ,arg,0);
+      };
+      $scope.delayTrovao1 = function(arg){
+        timerDelay = $interval(function(){
+          console.log("enviou Trovao");
+          var msg = '70' ;
+          client && client.publish('topicoPrincipalP', String(msg));
+          $scope.pararDelay();
+        } 
+        ,arg,0);
+      };
+
+      $scope.delayTrovao2 = function(arg){
+        timerDelay = $interval(function(){
+          console.log("enviou Trovao");
+          var msg = '90' ;
+          client && client.publish('topicoPrincipalP', String(msg));
+          $scope.pararDelay();
+        } 
+        ,arg,0);
+      };
+
+
+      $scope.pararDelay = function() {
+        if (angular.isDefined(timerDelay)) {
+          $interval.cancel(timerDelay);
+          timerDelay = undefined;
+        }
+      };
+
+
+
 
 
       $scope.minuto = formatNumber(Math.floor(timer1 / 60));
