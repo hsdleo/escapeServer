@@ -2,8 +2,7 @@ body {
 color: #2d3339;
 font-family: "Varela Round";
 text-align: center;
-background: #edeff0;
-font-size: 13px; }
+background: #edeff0; }
 
 a {
 color: #3f8abf;
@@ -12,20 +11,60 @@ a:hover {
 color: #65a1cc; }
 .list {
 background: #fff;
-width: 90%;
-min-width: 500px;
-margin: 5px auto 0;
-border-top: 20px solid #5a6772;
-text-align: left; }
-.list .item {
-border-bottom: 2px solid #edeff0;
-padding: 17px 50px 18px 17px; }
+width: 100%;
+margin: 2px auto 0;
+text-align: left;
+padding: 17px 50px 18px 17px }
+
 .list .item2{
 margin-left: 20px;
 border-bottom: 1px solid #edeff0;
 padding: 10px 50px 2px 17px; 
 margin-bottom: 10px;
 }
+.list .itemAcionamentos button {
+margin-left: 20px;
+margin-bottom: 10px;
+background: rgba(135, 0, 255, 0.36);
+font-size: x-large;
+cursor: pointer;
+}
+.list .itemAcionamentos button:hover {
+margin-left: 20px;
+margin-bottom: 10px;
+background: rgba(135, 0, 255, 0.66);
+font-size: x-large;
+cursor: pointer;
+}
+
+.list .itemDicas button {
+margin-left: 20px;
+margin-bottom: 10px;
+background: rgba(0, 18, 255, 0.31);
+font-size: x-large;
+}
+.list .itemDicas button:hover {
+margin-left: 20px;
+margin-bottom: 10px;
+background: rgba(0, 18, 255, 0.66);
+cursor: pointer;
+font-size: x-large;
+}
+
+.list .itemEfeitos button {
+margin-left: 20px;
+margin-bottom: 10px;
+background: rgba(0, 255, 21, 0.38);
+font-size: x-large;
+}
+.list .itemEfeitos button:hover {
+margin-left: 20px;
+margin-bottom: 10px;
+background: rgba(0, 255, 21, 0.66);
+font-size: x-large;
+cursor: pointer;
+}
+
 .list .item button {
 margin-left: 20px;
 margin-bottom: 10px;

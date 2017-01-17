@@ -1,36 +1,34 @@
 <div class = "list">
 	
-	<div class="item" > 
-	 	          <!--div audio options="sirene"/> 
-	              <button class="btn btn-sm btn-default"
-	              ng-click="imprimir(dicas[0])"
-	              >{{dicas[0].texto}}</button-->
-	              <button class="btn btn-sm btn-default"
-	              ng-click="tocarDicaMacaco()" >{{dicas[0].texto}}</button> 
-	              <button class="btn btn-sm btn-default"
-	              ng-click="tocarDicaMapa()" >{{dicas[1].texto}}</button> 
-	              <button class="btn btn-sm btn-default"
-	              ng-click="tocarDicaXadrez()" >{{dicas[2].texto}}</button> 
-	              <button class="btn btn-sm btn-default"
-	              ng-click="tocarDicaRemo()" >{{dicas[3].texto}}</button> 
-	              <button class="btn btn-sm btn-default"
-	              ng-click="tocarDicaTimao()" >{{dicas[4].texto}}</button> 
+	<div class="itemDicas" > 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaMacaco()" >{{dicas[0].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaMapa()" >{{dicas[1].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaXadrez()" >{{dicas[2].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaRemo()" >{{dicas[3].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaTimao()" >{{dicas[4].texto}}</button> 
 
-	              <audio media-player="dicaMacaco" data-playlist="playDerrota">
-	              	<source src="/sounds/dica_macaco.mp3" type="audio/mp3"/>
-	              </audio>
-	              <audio media-player="dicaMapa" data-playlist="playMapa">
-	              	<source src="/sounds/dica_mapa.mp3" type="audio/mp3"/>
-	              </audio>
-	              <audio media-player="dicaXadrez" data-playlist="playXadrez">
-	              	<source src="/sounds/dica_xadrez.mp3" type="audio/mp3"/>
-	              </audio>
-	              <audio media-player="dicaRemo" data-playlist="playRemo">
-	              	<source src="/sounds/dica_remo.mp3" type="audio/mp3"/>
-	              </audio>
-	              <audio media-player="dicaTimao" data-playlist="playTimao">
-	              	<source src="/sounds/dica_timao.mp3" type="audio/mp3"/>
-	              </audio>
-	          </div>
-	      </div>
+
+
+		<audio media-player="dicaMacaco" data-playlist="playDerrota">
+			<source src="/sounds/dica_macaco.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="dicaMapa" data-playlist="playMapa">
+			<source src="/sounds/dica_mapa.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="dicaXadrez" data-playlist="playXadrez">
+			<source src="/sounds/dica_xadrez.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="dicaRemo" data-playlist="playRemo">
+			<source src="/sounds/dica_remo.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="dicaTimao" data-playlist="playTimao">
+			<source src="/sounds/dica_timao.mp3" type="audio/mp3"/>
+		</audio>
+	</div>
+</div>
 

@@ -1,27 +1,27 @@
 <div class = "list" ng-init = "passagem = false;saida = false;luzCela = true;giroFlex = false">
-	<div class="item" >   
+	<div class="itemAcionamentos" >   
 
-		<button class="btn btn-xs btn-default" ng-show= "passagem"
+		<button class="btn btn-lg btn-default" ng-show= "passagem"
 		ng-click="comandoPassagem(1);passagem = false"
 		>{{acionamentos[0].texto}}</button>
-		<button class="btn btn-xs btn-default" ng-show= "!passagem"
+		<button class="btn btn-lg btn-default" ng-show= "!passagem"
 		ng-click="comandoPassagem(0);passagem = true"
 		>{{acionamentos[1].texto}}</button>
 
 
-		<button class="btn btn-xs btn-default" ng-show= "giroFlex"
+		<button class="btn btn-lg btn-default" ng-show= "giroFlex"
 		ng-click="comandoGiroflex(0);giroFlex = false" >{{acionamentos[2].texto}}</button> 
-		<button class="btn btn-xs btn-default" ng-show= "!giroFlex"
+		<button class="btn btn-lg btn-default" ng-show= "!giroFlex"
 		ng-click="comandoGiroflex(1);giroFlex = true" >{{acionamentos[3].texto}}</button> 
 
-		<button class="btn btn-xs btn-default" ng-show= "luzCela"
-		ng-click="comandoLuzCela(0);luzCela = false" >{{acionamentos[4].texto}}</button> 
-		<button class="btn btn-xs btn-default" ng-show= "!luzCela"
-		ng-click="comandoLuzCela(1);luzCela = true" >{{acionamentos[5].texto}}</button>
+		<button class="btn btn-lg btn-default" ng-show= "luzCela"
+		ng-click="comandoLuzCela(1);luzCela = false" >{{acionamentos[4].texto}}</button> 
+		<button class="btn btn-lg btn-default" ng-show= "!luzCela"
+		ng-click="comandoLuzCela(0);luzCela = true" >{{acionamentos[5].texto}}</button>
 		
-		<button class="btn btn-xs btn-default" ng-show= "saida"
+		<button class="btn btn-lg btn-default" ng-show= "saida"
 		ng-click="comandoSaida(1);saida = false">{{acionamentos[6].texto}}</button> 
-		<button class="btn btn-xs btn-default"  ng-show= "!saida"
+		<button class="btn btn-lg btn-default"  ng-show= "!saida"
 		ng-click="comandoSaida(0); saida = true">{{acionamentos[7].texto}}</button> 
 	</div>
 
