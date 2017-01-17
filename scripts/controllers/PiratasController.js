@@ -53,7 +53,7 @@
                   }
                   else{
                     if(message=="6"){
-                      $scope.tocarTimao();
+                      $scope.tocarEnigma();
                     }
 
                   }}}}}
@@ -258,7 +258,7 @@
            //$scope.sound = ngAudio.load("sounds/sirene.mp3"); // returns NgAudioObject
 
 
-           $scope.dicas = [{"id":"1","texto":"Macaco"},
+           $scope.dicas = [{"id":"1","texto":"Dica Macaco"},
            {"id":"2","texto":"Mapa"},
            {"id":"3","texto":"Xadrez"},
            {"id":"4","texto":"Remo"},
