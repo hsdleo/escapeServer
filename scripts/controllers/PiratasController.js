@@ -99,7 +99,7 @@
         $scope.audioTrovao.setVolume(0.8);
         $scope.audioTrovao.play();
         var msg = '70' ;
-        client && client.publish('topicoPrincipal', String(msg));
+        client && client.publish('topicoPrincipalP', String(msg));
       };
       $scope.tocarMacaco = function () {
         $scope.audioMacaco.setVolume(0.4);
@@ -213,7 +213,7 @@
 
 
            $scope.prepararJogo = function() {
-            client && client.publish('topicoPrincipal', String('01'));
+            client && client.publish('topicoPrincipalP', String('01'));
             $scope.comandoLuzCapitao(0);
 
           };
@@ -234,44 +234,44 @@
 
           $scope.comandoPassagem = function(cod) {
             var msg = '1' + cod; 
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalP', String(msg));
             $scope.message = cod;
 
           };
 
           $scope.comandoSaida = function(cod) {
             var msg = '2' + cod;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalP', String(msg));
             $scope.message = cod;
           };
           $scope.comandoGaveta= function(cod) {
             var msg = '3' + cod;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalP', String(msg));
             $scope.message = cod;
           };
           $scope.comandoLuzCapitao = function(cod) {
             var msg = '4' + cod;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalP', String(msg));
             $scope.message = cod;
           };
 
           $scope.comandoLuzConves= function(cod) {
             var msg = '5' + cod;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalP', String(msg));
             $scope.message = cod;
           };
           $scope.comandoBau= function(cod) {
             var msg = '6' + cod;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalP', String(msg));
             $scope.message = cod;
           };
           $scope.efeitoTrovao= function() {
             var msg = '70' ;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalP', String(msg));
           };
           $scope.acaoBau= function() {
             var msg = '80' ;
-            client && client.publish('topicoPrincipal', String(msg));
+            client && client.publish('topicoPrincipalP', String(msg));
             $scope.tocarAmbiente();
           };
 
