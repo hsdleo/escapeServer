@@ -88,6 +88,16 @@
         $scope.audioEnigma.setVolume(0.8);  
         $scope.audioEnigma.play();
       };
+
+      $scope.tocarEnigmaEmergencia = function () {
+        $scope.tocarTrovao1();
+        console.log("comecou emergencia");
+        $scope.audioEnigma.setVolume(1);  
+        $scope.audioEnigma.play();
+        //$scope.comandoLuzConves(0);
+        
+      };
+
       $scope.tocarRepetirEnigma = function () {
         $scope.audioRepetirEnigma.setVolume(0.8);  
         $scope.audioRepetirEnigma.play();
@@ -128,7 +138,7 @@
       $scope.tocarTrovao1 = function () {
         $scope.audioTrovao.setVolume(0.8);
         $scope.audioTrovao.play();
-        $scope.delayTrovao(1500);
+        $scope.efeitoTrovao();
         //var msg = '70' ;
         //client && client.publish('topicoPrincipalP', String(msg));
       };
@@ -136,7 +146,7 @@
       $scope.tocarTrovao2 = function () {
         $scope.audioTrovao.setVolume(0.8);
         $scope.audioTrovao.play();
-        $scope.delayTrovao2(1500);
+        $scope.efeitoTrovao();
         
       };
 
@@ -152,6 +162,7 @@
 
 
       var timerDelay;
+      
       $scope.delay = function(arg){
 
         timerDelay = $interval(function(){
@@ -160,33 +171,18 @@
         } 
         ,arg,0);
       };
-      $scope.delayTrovao1 = function(arg){
-        timerDelay = $interval(function(){
-          console.log("enviou Trovao");
-          var msg = '70' ;
-          client && client.publish('topicoPrincipalP', String(msg));
-          $scope.pararDelay();
-        } 
-        ,arg,0);
-      };
 
-      $scope.delayTrovao2 = function(arg){
-        timerDelay = $interval(function(){
-          console.log("enviou Trovao");
-          var msg = '90' ;
-          client && client.publish('topicoPrincipalP', String(msg));
-          $scope.pararDelay();
-        } 
-        ,arg,0);
-      };
 
 
       $scope.pararDelay = function() {
+        console.log("entrei no parar delay");
         if (angular.isDefined(timerDelay)) {
           $interval.cancel(timerDelay);
+          console.log("parei o delay");
           timerDelay = undefined;
         }
       };
+
 
 
 
@@ -278,7 +274,7 @@
            {"id":"8","texto":"Fechar Saída"}];
 
            $scope.efeitos = [{"id":"1","texto":"Macaco"},
-           {"id":"2","texto":"Trovao(final com luz)"},
+           {"id":"2","texto":"Trovao"},
            {"id":"3","texto":"Trovao(final sem luz)"},
            {"id":"4","texto":"Repetir Enigma"},
            {"id":"5","texto":"Explosao Saida"},
@@ -307,6 +303,7 @@
 
           $scope.comandoPassagem = function(cod) {
             var msg = '1' + cod; 
+            console.log("comando passagem");
             client && client.publish('topicoPrincipalP', String(msg));
             $scope.message = cod;
 
@@ -341,6 +338,7 @@
           $scope.efeitoTrovao= function() {
             var msg = '70' ;
             client && client.publish('topicoPrincipalP', String(msg));
+            console.log("enviou trovao");
           };
           $scope.acaoBau= function() {
             var msg = '80' ;
