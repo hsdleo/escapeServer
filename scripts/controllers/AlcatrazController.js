@@ -46,6 +46,14 @@
         $scope.audioDicaCama.setVolume(0.25);
         $scope.audioDicaCama.play();
       };
+      $scope.tocarDicaBanho = function () {
+        $scope.audioDicaBanho.setVolume(0.25);
+        $scope.audioDicaBanho.play();
+      };
+      $scope.tocarDicaQuebra = function () {
+        $scope.audioDicaQuebra.setVolume(0.25);
+        $scope.audioDicaQuebra.play();
+      };
       $scope.tocarDicaDirecoes = function () {
         $scope.audioDicaDirecoes.setVolume(0.25);
         $scope.audioDicaDirecoes.play();
@@ -58,9 +66,9 @@
         $scope.audioDicaAlvo.setVolume(0.25);
         $scope.audioDicaAlvo.play();
       };
-      $scope.tocarDicaCobertor = function () {
-        $scope.audioDicaCobertor.setVolume(0.25);
-        $scope.audioDicaCobertor.play();
+      $scope.tocarDicaCobertor2 = function () {
+        $scope.audioDicaCobertor2.setVolume(0.25);
+        $scope.audioDicaCobertor2.play();
       };
       $scope.tocarTelefone = function () {
         $scope.audioTelefone.setVolume(0.25);
@@ -151,9 +159,10 @@
            {"id":"3","texto":"Ficha (1)"},
            {"id":"4","texto":"Ficha (2)"},
            {"id":"5","texto":"Alvo"},
-           {"id":"6","texto":"Cobertor"},
-           {"id":"7","texto":"Apelido"},
-           {"id":"8","texto":"Tangram"}];
+           {"id":"6","texto":"Banho"},
+           {"id":"7","texto":"(TEL)Cobertor"},
+           {"id":"8","texto":"(TEL)Quebra Cabeça"},
+           {"id":"9","texto":"Tangram"}];
 
 
            $scope.alertas = [{"id":"1","texto":"Não tire as GARRAFAS"},
@@ -166,7 +175,8 @@
            {"id":"5","texto":"Desligar Luz"},
            {"id":"6","texto":"Ligar Luz"},
            {"id":"7","texto":"Abrir Saída"},
-           {"id":"8","texto":"Fechar Saída"}];
+           {"id":"8","texto":"Fechar Saída"},
+           {"id":"9","texto":"Som Derrota"}];
 
            $scope.efeitos = [{"id":"1","texto":"Descarga"},
            {"id":"2","texto":"Disjuntor"},

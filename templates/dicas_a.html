@@ -11,9 +11,16 @@
 	<audio media-player="audioDicaAlvo" data-playlist="playlistDicaAlvo">
 		<source src="/sounds/dicaAlvo.mp3" type="audio/mp3"/>
 	</audio>
-	<audio media-player="audioDicaCobertor" data-playlist="playlistDicaCobertor">
-		<source src="/sounds/dicaCobertor.mp3" type="audio/mp3"/>
+	<audio media-player="audioDicaCobertor2" data-playlist="playlistDicaCobertor2">
+		<source src="/sounds/dicaCobertor2.mp3" type="audio/mp3"/>
 	</audio>
+	<audio media-player="audioDicaBanho" data-playlist="playlistDicaBanho">
+		<source src="/sounds/dicaBanho.mp3" type="audio/mp3"/>
+	</audio>
+	<audio media-player="audioDicaQuebra" data-playlist="playlistDicaQuebra">
+		<source src="/sounds/dicaQuebra.mp3" type="audio/mp3"/>
+	</audio>
+
 	<div class="itemDicas" > 
 		
 		<button class="btn btn-lg btn-default"
@@ -25,7 +32,11 @@
 		<button class="btn btn-lg btn-default"
 		ng-click="tocarDicaAlvo()" >{{dicas[4].texto}}</button> 
 		<button class="btn btn-lg btn-default"
-		ng-click="tocarDicaCobertor()" >{{dicas[5].texto}}</button> 
+		ng-click="tocarDicaBanho()" >{{dicas[5].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaCobertor2()" >{{dicas[6].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaQuebra()" >{{dicas[7].texto}}</button> 
 		
 
 	</div>

@@ -88,7 +88,7 @@
         $scope.comandoLuzConves(0);
         $scope.audioEnigma.setVolume(0.8);  
         $scope.audioEnigma.play();
-        $scope.delayLuzConves(50000);
+
 
       };
 
@@ -97,6 +97,7 @@
         console.log("comecou emergencia");
         $scope.audioEnigma.setVolume(1);  
         $scope.audioEnigma.play();
+        $scope.delayLuzConves(50000);
 
         //$scope.comandoLuzConves(0);
         
@@ -162,6 +163,11 @@
       $scope.tocarObjetos = function () {
         $scope.audioObjetos.setVolume(1);
         $scope.audioObjetos.play();
+      };
+      $scope.efeitoLuzBau = function(){
+        $scope.audioTrovao.setVolume(0.8);
+        $scope.audioTrovao.play();
+        $scope.acaoBau();            
       };
 
 
