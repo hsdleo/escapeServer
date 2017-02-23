@@ -85,6 +85,7 @@
       };
 
       $scope.tocarEnigma = function () {
+        $scope.comandoLuzConves(0);
         $scope.audioEnigma.setVolume(0.8);  
         $scope.audioEnigma.play();
       };
@@ -94,6 +95,7 @@
         console.log("comecou emergencia");
         $scope.audioEnigma.setVolume(1);  
         $scope.audioEnigma.play();
+
         //$scope.comandoLuzConves(0);
         
       };
@@ -163,10 +165,11 @@
 
       var timerDelay;
       
-      $scope.delay = function(arg){
+      $scope.delayAmbiente = function(arg){
 
         timerDelay = $interval(function(){
           console.log("tempo passou");
+          $scope.tocarAmbiente();
           $scope.pararDelay();
         } 
         ,arg,0);
@@ -183,11 +186,6 @@
         }
       };
 
-
-
-
-
-
       $scope.minuto = formatNumber(Math.floor(timer1 / 60));
       $scope.segundo = formatNumber(timer1%60);
       $scope.message = 'Piratas Controller';
@@ -195,22 +193,7 @@
 
       $scope.imprimir = function(arg){
       }
-      var timerDelay;
-      $scope.delay = function(arg){
-
-        timerDelay = $interval(function(){
-          console.log("tempo passou");
-          $scope.pararDelay();
-        } 
-        ,arg,0);
-      };
-      $scope.pararDelay = function() {
-        if (angular.isDefined(timerDelay)) {
-          $interval.cancel(timerDelay);
-          timerDelay = undefined;
-        }
-      };
-
+ 
       
       var stop;
       $scope.startTimer = function() {
@@ -220,12 +203,10 @@
               stop = $interval(function() {
                 if (timer1 > 0 ) {
                   timer1 = timer1- 1;
-                  if(timer1 == 60){$scope.tocarSino();}
                   $scope.minuto = formatNumber(Math.floor(timer1 / 60));
                   $scope.segundo = formatNumber(timer1%60);
                 } else {
                   $scope.stopTimer();
-                  $scope.tocarSirene();
                   $scope.tocarDerrota();
                 }
               }, 1000,0);
@@ -258,7 +239,8 @@
            {"id":"2","texto":"Mapa"},
            {"id":"3","texto":"Xadrez"},
            {"id":"4","texto":"Remo"},
-           {"id":"5","texto":"Timao"}];
+           {"id":"5","texto":"Timao"},
+           {"id":"6","texto":"Luz Baú"}];
 
 
            $scope.alertas = [{"id":"1","texto":"Não tire as GARRAFAS"},
@@ -343,7 +325,6 @@
           $scope.acaoBau= function() {
             var msg = '80' ;
             client && client.publish('topicoPrincipalP', String(msg));
-            $scope.tocarAmbiente();
           };
 
 
