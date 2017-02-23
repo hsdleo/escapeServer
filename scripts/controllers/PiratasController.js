@@ -88,6 +88,8 @@
         $scope.comandoLuzConves(0);
         $scope.audioEnigma.setVolume(0.8);  
         $scope.audioEnigma.play();
+        $scope.delayLuzConves(50000);
+
       };
 
       $scope.tocarEnigmaEmergencia = function () {
@@ -165,11 +167,11 @@
 
       var timerDelay;
       
-      $scope.delayAmbiente = function(arg){
+      $scope.delayLuzConves = function(arg){
 
         timerDelay = $interval(function(){
           console.log("tempo passou");
-          $scope.tocarAmbiente();
+          $scope.comandoLuzConves(1);
           $scope.pararDelay();
         } 
         ,arg,0);
@@ -309,6 +311,7 @@
 
           $scope.comandoLuzConves= function(cod) {
             var msg = '5' + cod;
+            console.log("luz conves ");
             client && client.publish('topicoPrincipalP', String(msg));
             $scope.message = cod;
           };
@@ -323,6 +326,7 @@
             console.log("enviou trovao");
           };
           $scope.acaoBau= function() {
+            console.log("comando acao bau");
             var msg = '80' ;
             client && client.publish('topicoPrincipalP', String(msg));
           };
