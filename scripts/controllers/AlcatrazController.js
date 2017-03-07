@@ -43,39 +43,39 @@
         $scope.audioDerrota.play();
       };
       $scope.tocarDicaCama = function () {
-        $scope.audioDicaCama.setVolume(0.25);
+        $scope.audioDicaCama.setVolume(0.6);
         $scope.audioDicaCama.play();
       };
       $scope.tocarDicaBanho = function () {
-        $scope.audioDicaBanho.setVolume(0.25);
+        $scope.audioDicaBanho.setVolume(0.6);
         $scope.audioDicaBanho.play();
       };
       $scope.tocarDicaQuebra = function () {
-        $scope.audioDicaQuebra.setVolume(0.25);
+        $scope.audioDicaQuebra.setVolume(0.9);
         $scope.audioDicaQuebra.play();
       };
       $scope.tocarDicaBeijo = function () {
-        $scope.audioDicaBeijo.setVolume(0.25);
+        $scope.audioDicaBeijo.setVolume(0.9);
         $scope.audioDicaBeijo.play();
       };
       $scope.tocarDicaDirecoes = function () {
-        $scope.audioDicaDirecoes.setVolume(0.25);
+        $scope.audioDicaDirecoes.setVolume(0.6);
         $scope.audioDicaDirecoes.play();
       };
       $scope.tocarDicaFichas = function () {
-        $scope.audioDicaFichas.setVolume(0.25);
+        $scope.audioDicaFichas.setVolume(0.6);
         $scope.audioDicaFichas.play();
       };
       $scope.tocarDicaAlvo = function () {
-        $scope.audioDicaAlvo.setVolume(0.25);
+        $scope.audioDicaAlvo.setVolume(0.6);
         $scope.audioDicaAlvo.play();
       };
       $scope.tocarDicaCobertor2 = function () {
-        $scope.audioDicaCobertor2.setVolume(0.25);
+        $scope.audioDicaCobertor2.setVolume(0.9);
         $scope.audioDicaCobertor2.play();
       };
       $scope.tocarTelefone = function () {
-        $scope.audioTelefone.setVolume(0.25);
+        $scope.audioTelefone.setVolume(0.6);
         $scope.audioTelefone.playPause();
       };
       $scope.tocarArma = function () {
@@ -89,7 +89,7 @@
 
 
       $scope.tocarSirene = function () {
-        $scope.audioSirene.setVolume(0.2);
+        $scope.audioSirene.setVolume(0.3);
         $scope.audioSirene.playPause();
       };
       $scope.tocarObjetos = function () {
@@ -101,11 +101,11 @@
         $scope.audioGarrafas.play();
       };
       $scope.tocarDescarga = function () {
-        $scope.audioDescarga.setVolume(0.2);
+        $scope.audioDescarga.setVolume(0.6);
         $scope.audioDescarga.play();
       };
       $scope.tocarDisjuntor = function () {
-        $scope.audioDisjuntor.setVolume(0.2);
+        $scope.audioDisjuntor.setVolume(0.6);
         $scope.audioDisjuntor.play();
         
       };
