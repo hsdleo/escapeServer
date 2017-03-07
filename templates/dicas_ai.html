@@ -1,0 +1,49 @@
+<div class = "list">
+	<audio media-player="audioDicaCama" data-playlist="playlistDicaCama">
+		<source src="/sounds/english/Bed Check.mp3" type="audio/mp3"/>
+	</audio>
+	<audio media-player="audioDicaFichas" data-playlist="playlistDicaFichas">
+		<source src="/sounds/english/File 1.mp3" type="audio/mp3"/>
+	</audio>
+	<audio media-player="audioDicaDirecoes" data-playlist="playlistDicaDirecoes">
+		<source src="/sounds/english/File 2 - Directions.mp3" type="audio/mp3"/>
+	</audio>
+	<audio media-player="audioDicaAlvo" data-playlist="playlistDicaAlvo">
+		<source src="/sounds/english/Target.mp3" type="audio/mp3"/>
+	</audio>
+	<audio media-player="audioDicaCobertor2" data-playlist="playlistDicaCobertor2">
+		<source src="/sounds/english/Cap And Cover.mp3" type="audio/mp3"/>
+	</audio>
+	<audio media-player="audioDicaBanho" data-playlist="playlistDicaBanho">
+		<source src="/sounds/english/Shower.mp3" type="audio/mp3"/>
+	</audio>
+	<audio media-player="audioDicaQuebra" data-playlist="playlistDicaQuebra">
+		<source src="/sounds/english/Puzzle- Tangran.mp3" type="audio/mp3"/>
+	</audio>
+	<audio media-player="audioDicaBeijo" data-playlist="playlistDicaBeijo">
+		<source src="/sounds/english/Kiss Freedom.mp3" type="audio/mp3"/>
+	</audio>
+
+	<div class="itemDicas" > 
+		
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaCama()" >{{dicas[0].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaFichas()" >{{dicas[2].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaDirecoes()" >{{dicas[3].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaAlvo()" >{{dicas[4].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaBanho()" >{{dicas[5].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaCobertor2()" >{{dicas[6].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaQuebra()" >{{dicas[7].texto}}</button>
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaBeijo()" >{{dicas[8].texto}}</button> 
+		
+
+	</div>
+</div>
+

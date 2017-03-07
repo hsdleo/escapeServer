@@ -54,6 +54,10 @@
         $scope.audioDicaQuebra.setVolume(0.25);
         $scope.audioDicaQuebra.play();
       };
+      $scope.tocarDicaBeijo = function () {
+        $scope.audioDicaBeijo.setVolume(0.25);
+        $scope.audioDicaBeijo.play();
+      };
       $scope.tocarDicaDirecoes = function () {
         $scope.audioDicaDirecoes.setVolume(0.25);
         $scope.audioDicaDirecoes.play();
@@ -162,7 +166,7 @@
            {"id":"6","texto":"Banho"},
            {"id":"7","texto":"(TEL)Cobertor"},
            {"id":"8","texto":"(TEL)Quebra Cabeça"},
-           {"id":"9","texto":"Tangram"}];
+           {"id":"9","texto":"Beijo Liberta"}];
 
 
            $scope.alertas = [{"id":"1","texto":"Não tire as GARRAFAS"},

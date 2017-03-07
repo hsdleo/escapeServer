@@ -1,0 +1,38 @@
+<div class = "list">
+	<div class="itemEfeitos" >    
+		
+		<button class="btn btn-lg btn-default" 
+		ng-click="tocarMacaco()" >{{efeitos[0].texto}}</button>
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarTrovao1()" >{{efeitos[1].texto}}</button> 
+
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarRepetirEnigma()" >{{efeitos[3].texto}}</button> 
+
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarExplosao()" >{{efeitos[4].texto}}</button> 
+
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDerrota()" >{{efeitos[5].texto}}</button> 
+
+
+		<audio media-player="audioMacaco" data-playlist="playlistMacaco">
+			<source src="/sounds/macaco.mp3" type="audio/mp3"/>
+		</audio>	
+		<audio media-player="audioRepetirEnigma" data-playlist="playRepetir">
+			<source src="/sounds/english/Enigma repeat.mp3" type="audio/mp3"/>
+		</audio>
+
+		<audio media-player="audioTrovao" data-playlist="playlistTrovao">
+			<source src="/sounds/trovao.mp3" type="audio/mp3"/>
+		</audio>
+
+		<audio media-player="audioDerrotaPiratas" data-playlist="playDerrotaPirata">
+			<source src="/sounds/english/Game Over Piratas.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="audioExplosao" data-playlist="playExplosao">
+			<source src="/sounds/audioExplosao.mp3" type="audio/mp3"/>
+		</audio>
+
+	</div>
+</div>

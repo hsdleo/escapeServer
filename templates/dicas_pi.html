@@ -1,0 +1,36 @@
+<div class = "list">
+	
+	<div class="itemDicas" > 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaMacaco()" >{{dicas[0].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaMapa()" >{{dicas[1].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaXadrez()" >{{dicas[2].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaRemo()" >{{dicas[3].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="tocarDicaTimao()" >{{dicas[4].texto}}</button> 
+		<button class="btn btn-lg btn-default"
+		ng-click="efeitoLuzBau()" >{{dicas[5].texto}}</button> 
+
+
+
+		<audio media-player="dicaMacaco" data-playlist="playDerrota">
+			<source src="/sounds/english/Monkey.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="dicaMapa" data-playlist="playMapa">
+			<source src="/sounds/english/Image Map.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="dicaXadrez" data-playlist="playXadrez">
+			<source src="/sounds/english/Chess.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="dicaRemo" data-playlist="playRemo">
+			<source src="/sounds/english/Rowing.mp3" type="audio/mp3"/>
+		</audio>
+		<audio media-player="dicaTimao" data-playlist="playTimao">
+			<source src="/sounds/nada.mp3" type="audio/mp3"/>
+		</audio>
+	</div>
+</div>
+

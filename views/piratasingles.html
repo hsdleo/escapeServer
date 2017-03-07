@@ -1,0 +1,67 @@
+<div id="diviniciar" ng-init="aguardando = true;preparar = false;aguardandoBau=false;iniciar = false;resetar = false">
+  <label ng-show = "aguardando"> Aguardando Controlador</label>
+  <label ng-show = "aguardandoBau"> Aguardando Bau</label>
+  <button class= "btiniciar" type="button" ng-show = "preparar" ng-click = "prepararJogo();preparar = false;iniciar = true">Preparar</button>
+  <button class= "btiniciar" type="button" ng-show = "iniciar" ng-click = "startJogo();iniciar = false;resetar = true">Iniciar</button>
+  
+  <audio media-player="audioEnigma" data-playlist="playEnigma">
+    <source src="/sounds/english/Barba Negra enigma.mp3" type="audio/mp3"/>
+  </audio>
+  <audio media-player="audioAmbiente" data-playlist="playlist4">
+    <source src="/sounds/ambientePiratas.mp3" type="audio/mp3"/>
+  </audio>
+  <audio media-player="aberturaPassagem" data-playlist="playlistAbertura">
+    <source src="/sounds/somPassagem.mp3" type="audio/mp3"/>
+  </audio>
+  <audio media-player="somMedo" data-playlist="playlistMedo">
+    <source src="/sounds/somMedo.mp3" type="audio/mp3"/>
+  </audio>
+  <audio media-player="audioNada" data-playlist="playlistNada">
+    <source src="/sounds/nada.mp3" type="audio/mp3"/>
+  </audio>
+  <!--button class= "btresetar"  ng-show = "resetar" type="button" ng-click = "resetarJogo();preparar = true;resetar = false">Recomeçar</button-->
+</div>
+<div id = "clockdiv">
+  <div>
+    <span class = "minuto">{{minuto}}</span>
+  </div>
+
+  <div>
+    <span class = "segundo">{{segundo}}</span>
+  </div>
+</div>
+<div>
+<center><h2>PIRATAS EM INGLÊS</h2></center>
+</div>
+<div>
+  <center><h4>Efeitos</h4></center>
+  <efeitospi></efeitospi>
+</div>
+<div>
+  <center><h4>Dicas</h4></center>
+  <dicaspi></dicaspi>
+</div>
+<div>
+  <center><h4>Acionamentos</h4></center> 
+  <aciop></aciop>
+</div>
+
+
+
+<!--div>
+  <center><h3>Dicas</h3></center>
+  <dicas></dicas>
+</div-->
+<!--div>
+  <center><h3>Alertas</h3></center>
+  <alertas></alertas>
+</div-->
+
+</br></br>
+
+
+
+
+
+
+

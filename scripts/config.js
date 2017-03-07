@@ -19,6 +19,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
          templateUrl: 'views/piratas.html',
          controller: 'piratasController'
      })
+     .state('alcatrazingles', {
+         url: '/alcatrazingles',
+         templateUrl: 'views/alcatrazingles.html',
+         controller: 'alcatrazController'
+     })
+     .state('piratasingles', {
+         url: '/piratasingles',
+         templateUrl: 'views/piratasingles.html',
+         controller: 'piratasController'
+     })
      ;
 
 });
