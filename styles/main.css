@@ -97,7 +97,14 @@ margin-bottom: 10px;
 background: rgba(200, 0, 0, 0.36);
 font-size: x-large;
 cursor: pointer;
+}
 
+#bt-k7{
+margin-left: 20px;
+margin-bottom: 10px;
+background: rgba(200, 0, 0, 0.36);
+font-size: x-large;
+cursor: pointer;
 }
 #diviniciar{
   position: absolute;

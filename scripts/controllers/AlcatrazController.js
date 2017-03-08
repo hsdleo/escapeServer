@@ -66,6 +66,10 @@
         $scope.audioDicaFichas.setVolume(0.6);
         $scope.audioDicaFichas.play();
       };
+      $scope.tocarFitaK7 = function () {
+        $scope.audioFitaK7 .setVolume(1);
+        $scope.audioFitaK7 .play();
+      };
       $scope.tocarDicaAlvo = function () {
         $scope.audioDicaAlvo.setVolume(0.6);
         $scope.audioDicaAlvo.play();
