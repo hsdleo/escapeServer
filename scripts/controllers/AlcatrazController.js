@@ -178,8 +178,8 @@
 
            $scope.acionamentos = [{"id":"1","texto":"Abrir Passagem"},
            {"id":"2","texto":"Fechar Passagem"},
-           {"id":"3","texto":"Desligar GiroFlex"},
-           {"id":"4","texto":"Ligar GiroFlex"},
+           {"id":"3","texto":"Ligar GiroFlex"},
+           {"id":"4","texto":"Desligar GiroFlex"},
            {"id":"5","texto":"Desligar Luz"},
            {"id":"6","texto":"Ligar Luz"},
            {"id":"7","texto":"Abrir Saída"},
@@ -214,6 +214,7 @@
           };
 
           $scope.comandoPassagem = function(cod) {
+            console.log("passagem = " + cod);
             var msg = '1' + cod; 
             client && client.publish('topicoPrincipalA', String(msg));
             $scope.message = cod;
