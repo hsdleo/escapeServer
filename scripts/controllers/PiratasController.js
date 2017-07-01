@@ -112,6 +112,8 @@
       $scope.tocarExplosao = function () {
         $scope.audioExplosao.setVolume(0.4);  
         $scope.audioExplosao.play();
+	scope.audioFinalPirata.setVolume(0.8);  
+        $scope.audioFinalPirata.play();
       };
 
       $scope.tocarDicaMacaco = function(){
